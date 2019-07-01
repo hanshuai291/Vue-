@@ -9,15 +9,15 @@
 				<span class="mui-tab-label">外卖</span>
 			</a>
 			<a class="mui-tab-item" href="#tabbar-with-chat">
-				<span class="mui-icon mui-icon-email"><span class="mui-badge">9</span></span>
+				<span class="mui-icon mui-icon-eye"><span class="mui-badge">9</span></span>
 				<span class="mui-tab-label">发现</span>
 			</a>
 			<a class="mui-tab-item" href="#tabbar-with-contact">
-				<span class="mui-icon mui-icon-contact"></span>
+				<span class="mui-icon mui-icon-extra mui-icon-extra-order"></span>
 				<span class="mui-tab-label">订单</span>
 			</a>
 			<a class="mui-tab-item" href="#tabbar-with-map">
-				<span class="mui-icon mui-icon-gear"></span>
+				<span class="mui-icon mui-icon-contact mui-icon-icon-contact-filled"></span>
 				<span class="mui-tab-label">我的</span>
 			</a>
 		</nav>
