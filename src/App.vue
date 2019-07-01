@@ -1,25 +1,29 @@
 <template>
   <div class="content">
-    <mt-header fixed title="饿了么"></mt-header>
-    <h1>这是 App 组件</h1>
+    <!-- 顶部的 header区域 -->
+	<mt-header fixed title="饿了么"></mt-header>
+	<!-- 中间的router-view区域 -->
+	<transition>
+		<router-view></router-view>
+	</transition>
 
     		<nav class="mui-bar mui-bar-tab">
-			<a class="mui-tab-item mui-active" href="#tabbar">
+			<router-link class="mui-tab-item" to="/home">
 				<span class="mui-icon mui-icon-home"></span>
 				<span class="mui-tab-label">外卖</span>
-			</a>
-			<a class="mui-tab-item" href="#tabbar-with-chat">
+			</router-link>
+			<router-link class="mui-tab-item" to="/discover">
 				<span class="mui-icon mui-icon-eye"><span class="mui-badge">9</span></span>
 				<span class="mui-tab-label">发现</span>
-			</a>
-			<a class="mui-tab-item" href="#tabbar-with-contact">
+			</router-link>
+			<router-link class="mui-tab-item" to="/bill">
 				<span class="mui-icon mui-icon-extra mui-icon-extra-order"></span>
 				<span class="mui-tab-label">订单</span>
-			</a>
-			<a class="mui-tab-item" href="#tabbar-with-map">
+			</router-link>
+			<router-link class="mui-tab-item" to="/me">
 				<span class="mui-icon mui-icon-contact mui-icon-icon-contact-filled"></span>
 				<span class="mui-tab-label">我的</span>
-			</a>
+			</router-link>
 		</nav>
   </div>
 </template>
@@ -30,6 +34,21 @@
 
 <style lang="scss" scoped>
 .content{
-  padding-top: 40px
+  padding-top: 40px;
+  overflow-x: hidden
+}
+.v-enter{
+	opacity: 0;
+	transform: translateX(100%)
+}
+.v-leave-to{
+	opacity: 0;
+	transform: translateX(-100%);
+	position: absolute;
+}
+
+.v-enter-active,
+.v-levate-atcive{
+	transition: all .5s ease
 }
 </style>
