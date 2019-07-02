@@ -14,9 +14,9 @@
 		            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><router-link to="/home/newsList">
 		                    <img src="../images/menu1.png" alt="">
 		                    <div class="mui-media-body">News</div></router-link></li>
-		            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><a href="#">
+		            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><router-link to="/home/photolist">
 		                    <img src="../images/menu2.png" alt="">
-		                    <div class="mui-media-body">Pictures</div></a></li>
+		                    <div class="mui-media-body">Pictures</div></router-link></li>
 		            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><a href="#">
 		                    <img src="../images/menu3.png" alt="">
 		                    <div class="mui-media-body">Shops</div></a></li>

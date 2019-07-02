@@ -8,11 +8,15 @@
 
         <hr>
         <div id="content" v-html="newsInfo.content"></div>
+        <div id="commnets">
+            <comments :id="this.id"></comments>
+        </div>
     </div>
 </template>
 
 <script>
 import Toast from "mint-ui"
+import comment from "../comment/comments.vue"
 export default {
     data() {
         return {
@@ -31,10 +35,13 @@ export default {
                     this.newsInfo = result.body.message[0]
                 }
                 else{
-                    Toast("获取新闻失败")
+                    // Toast("获取新闻失败")
                 }
             })
         }
+    },
+    components:{
+        "comments":comment
     }
 }
 </script>
@@ -51,9 +58,6 @@ export default {
         color: blue;
         display: flex;
         justify-content: space-between
-    }
-    .content{
-
     }
 }
 </style>

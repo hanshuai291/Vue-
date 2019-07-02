@@ -4,9 +4,12 @@ import app from "./App.vue"
 
 //导入路由模块
 import VueRouter from "vue-router"
-//按需导入header组件
-import {Header,Swipe,SwipeItem} from "mint-ui"
+// //按需导入header组件
+// import {Header,Swipe,SwipeItem,Button,Lazyload} from "mint-ui"
 
+import MintUI from 'mint-ui'
+import 'mint-ui/lib/style.css'
+Vue.use(MintUI)
 
 //挂载 VueRouter
 Vue.use(VueRouter)
@@ -15,8 +18,13 @@ Vue.use(VueRouter)
 import VueResource from "vue-resource"
 
 Vue.use(VueResource)
+
+import VuePreview from 'vue-preview'
+Vue.use(VuePreview)
 //配置全局根目录
 // Vue.http.options.root = 'http://www.liulongbin.top:3005';
+//全局配置表单数据组织 格式
+Vue.http.options.emulateJSON = true;
 
 
 //导入router.js
@@ -32,9 +40,11 @@ Vue.filter("dataFormat",function(dataStr,pattern="YYYY-MM-DD HH:MM:SS"){
 import "./lib/mui/css/mui.css"
 import "./lib/mui/css/icons-extra.css"
 
-Vue.component(Header.name,Header)
-Vue.component(Swipe.name, Swipe)
-Vue.component(SwipeItem.name, SwipeItem)
+// Vue.component(Header.name,Header)
+// Vue.component(Swipe.name, Swipe)
+// Vue.component(SwipeItem.name, SwipeItem)
+// Vue.component(Button.name, Button)
+// Vue.use(Lazyload)
 
 let vm = new Vue({
     el:"#app",
