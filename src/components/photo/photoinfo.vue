@@ -13,9 +13,9 @@
       <img class="preview-img" v-for="(item, index) in list" :src="item.src" height="100" @click="$preview.open(index, list)" :key="item.src">
     </div> -->
 
-      <div class="suoluetu">
+        <div class="suoluetu">
             <vue-preview :slides="list"></vue-preview>
-      </div>
+        </div>
 
         <div class="content" v-html="photoThing.content">
         </div>
@@ -62,9 +62,9 @@
                         result.body.message.forEach(item => {
                             item.w = 600;
                             item.h = 400;
-                            item.msrc = item.src; 
-                            item.alt='picture1'
-                            item.title= 'Image Caption 1'
+                            item.msrc = item.src;
+                            item.alt = 'picture1'
+                            item.title = 'Image Caption 1'
                             //msrc：小图像,到时候让后端传个小图像过来
                         });
                         // 把完整的数据保存到 list 中
@@ -99,7 +99,7 @@
             font-size: 13px;
             line-height: 20px
         }
-            
+
         .suoluetu {
             img {
                 width: 60px;
@@ -108,6 +108,5 @@
                 box-shadow: 0 0 8px #999;
             }
         }
-        }
-    
+    }
 </style>

@@ -22,19 +22,18 @@
     export default {
         data() {
             return {
-                newsList:[]
+                newsList: []
             }
         },
-        created(){
+        created() {
             this.getNews()
         },
-        methods:{
-            getNews(){
-                this.$http.get("http://www.liulongbin.top:3005/api/getnewslist").then(result=>{
-                    if(result.body.status ===0){
+        methods: {
+            getNews() {
+                this.$http.get("http://www.liulongbin.top:3005/api/getnewslist").then(result => {
+                    if (result.body.status === 0) {
                         this.newsList = result.body.message
-                    }
-                    else{
+                    } else {
                         Toast("获取新闻列表失败")
                     }
                 })
@@ -44,15 +43,16 @@
 </script>
 
 <style lang="scss" scoped>
-.mui-media-body{
-    h1{
-      font-size: 14px
+    .mui-media-body {
+        h1 {
+            font-size: 14px
+        }
+
+        .mui-ellipsis {
+            font-size: 12px;
+            color: #226aff;
+            display: flex;
+            justify-content: space-between
+        }
     }
-    .mui-ellipsis{
-        font-size: 12px;
-        color: #226aff;
-        display: flex;
-        justify-content: space-between
-    }
-}
 </style>

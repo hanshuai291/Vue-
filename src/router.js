@@ -9,21 +9,68 @@ import newsList from "./components/news/newsList.vue"
 import newsInfo from "./components/news/newsInfo.vue"
 import photolist from "./components/photo/photolist.vue"
 import photoinfo from "./components/photo/photoinfo.vue"
+import goodslist from "./components/goods/goodslist.vue"
+import goodsDetail from "./components/goods/goodsDetail.vue"
+import goodsDesc from "./components/goods/goodsDesc.vue"
+import goodsComt from "./components/goods/goodsComment.vue"
 // 3. 创建路由对象
 var router = new VueRouter({
-  routes: [  //匹配对应的路由规则
+  routes: [ //匹配对应的路由规则
     //默认路由重定向至 home界面
-    {path:"/",redirect:home},
-    {path:"/home/newslist",component:newsList},
-    {path:"/home",component:home},
-    {path:"/discover",component:discover},
-    {path:"/bill",component:bill},
-    {path:"/me",component:me},
-    {path:"/home/newsinfo/:id",component:newsInfo},
-    {path:"/home/photolist",component:photolist},
-    {path:"/home/photoinfo/:id",component:photoinfo}
+    {
+      path: "/",
+      redirect: "/home"
+    },
+    {
+      path: "/home/newslist",
+      component: newsList
+    },
+    {
+      path: "/home",
+      component: home
+    },
+    {
+      path: "/discover",
+      component: discover
+    },
+    {
+      path: "/bill",
+      component: bill
+    },
+    {
+      path: "/me",
+      component: me
+    },
+    {
+      path: "/home/newsinfo/:id",
+      component: newsInfo
+    },
+    {
+      path: "/home/photolist",
+      component: photolist
+    },
+    {
+      path: "/home/photoinfo/:id",
+      component: photoinfo
+    },
+    {
+      path: "/home/goodslist",
+      component: goodslist
+    },
+    {
+      path: "/home/goodsdetail/:id",
+      component: goodsDetail
+    },
+    {
+      path: "/home/goodsdesc/:id",
+      component: goodsDesc
+    },
+    {
+      path: "/home/goodscomment/:id",
+      component: goodsComt
+    }
   ],
-  linkActiveClass:"mui-active" //实现覆盖路由样式
+  linkActiveClass: "mui-active" //实现覆盖路由样式
 })
 
 // 把路由对象暴露出去
